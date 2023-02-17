@@ -1,1 +1,1 @@
-**If, else and whiles tutorials**
+**If, else and while tutorials**
