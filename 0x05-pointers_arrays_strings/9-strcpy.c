@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strycpy - copy string
+ * _strcpy - copy string
  * @dest: destination variable
  * @src: source of string
  *
