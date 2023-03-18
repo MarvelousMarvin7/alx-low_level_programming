@@ -6,6 +6,7 @@
  * string_nconcat - concatenates two strings
  * @s1: destination
  * @s2: source
+ * @n: string length of source demanded
  *
  * Return: Pointer to memory
  */
