@@ -9,14 +9,14 @@
  */
 void print_all(const char * const format, ...)
 {
+	va_list args;
 	char c;
 	int i = 0;
 	float f;
 	char *s;
-	va_list args;
 
 	va_start(args, format);
-	while (format && format[i])
+	while (format != NULL && format[i])
 	{
 		switch (format[i])
 		{
@@ -35,7 +35,7 @@ void print_all(const char * const format, ...)
 		case 's':
 			s = va_arg(args, char *);
 			if (s == NULL)
-				printf("nil");
+				s = "(nil)";
 			printf("%s", s);
 			break;
 		default:
