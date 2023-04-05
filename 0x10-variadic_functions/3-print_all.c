@@ -79,12 +79,13 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4 && format[i] != "cifs"[j])
 			j++;
-
 		if (j < 4)
 			print_func[j](args);
 
 		if (format[i + 1] && j < 4)
+		{
 			printf(", ");
+		}
 
 		i++;
 	}
