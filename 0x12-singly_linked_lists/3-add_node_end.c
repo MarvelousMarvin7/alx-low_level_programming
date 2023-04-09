@@ -3,6 +3,7 @@
 
 /**
  * add_node_end - add new node to the end
+ * @head: first node pointer
  * @str: new string node
  *
  * Return: new node
