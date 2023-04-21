@@ -56,12 +56,6 @@ int main(int ac, char **av)
 	}
 	while ((text_read = read(file_from, buffer, BUFFER_SIZE)) > 0)
 	{
-		if (text_read == -1)
-		{
-			dprintf(STER, "Error: Can't read from file %s\n",
-				av[1]);
-			exit(98);
-		}
 		text_written = write(file_to, buffer, text_read);
 
 		if (text_written == -1 || text_written != text_read)
@@ -70,6 +64,12 @@ int main(int ac, char **av)
 				exit(99);
 		}
 	}
+	if (text_read == -1)
+	{
+		dprintf(STER, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
+	}
+
 	close_files(file_from, file_to);
 
 	return (0);
