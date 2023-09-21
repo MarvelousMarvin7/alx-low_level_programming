@@ -1,6 +1,11 @@
 #include "lists.h"
 
-
+/**
+ * delete_dnodeint_at_index - delete a node
+ * @head: head of list
+ * @index: position of nodes
+ * Return: 1 ON SUCCESS else 0
+ */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *temp, *tempb;
